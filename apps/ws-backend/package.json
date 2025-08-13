@@ -12,16 +12,22 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/typescript-config": "*"
+    "@repo/typescript-config": "*",
+    "@types/jsonwebtoken": "^9.0.10",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
     "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/node": "^22.15.3",
     "tsx": "^4.19.2",
     "typescript": "5.8.3"
   },
-  "keywords": ["backend", "websocket", "server"],
+  "keywords": [
+    "backend",
+    "websocket",
+    "server"
+  ],
   "author": "",
   "license": "ISC"
 }

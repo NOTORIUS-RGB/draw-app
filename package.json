@@ -25,7 +25,9 @@
     "packages/*"
   ],
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "pnpn": "^0.0.1",
     "ws": "^8.18.3"
   }
