@@ -20,8 +20,9 @@
     "noUncheckedIndexedAccess": true
   },
   "references": [
-    { "path": "packages/typescript-config" },
     { "path": "packages/ui" },
+    { "path": "packages/common" },
+    { "path": "packages/backend-common" },
     { "path": "apps/web" },
     { "path": "apps/http-backend" },
     { "path": "apps/ws-backend" }
