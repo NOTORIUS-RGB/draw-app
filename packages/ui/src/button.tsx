@@ -9,10 +9,14 @@ interface ButtonProps {
 }
 
 export const Button = ({ children, className, appName }: ButtonProps) => {
+  const handleClick = () => {
+    console.log(`Hello from your ${appName} app!`);
+  };
+
   return (
     <button
       className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
+      onClick={handleClick}
     >
       {children}
     </button>

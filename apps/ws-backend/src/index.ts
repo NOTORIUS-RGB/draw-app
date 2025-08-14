@@ -1,6 +1,6 @@
 import { WebSocketServer } from 'ws';
 import jwt from 'jsonwebtoken';
-import { JWT_SECRET } from './config.js';
+import { JWT_SECRET } from '@repo/backend-common';
 
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -23,10 +23,10 @@ wss.on('connection', function connection(ws, request) {
       return ws.close();
     }
 
-    ws.on('message', function message(data) {
+    ws.on('message', function message() {
       ws.send('pong');
     });
-  } catch (error) {
+  } catch {
     ws.close();
   }
 });
