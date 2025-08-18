@@ -29,6 +29,8 @@ app.post("/signup", async (req: express.Request, res: express.Response) => {
     res.json({
       userId: user.id
     });
+    // Example on your backend for a login endpoint
+   
   }
 catch(e)
 {
@@ -94,6 +96,18 @@ app.post("/room", Middleware, async (req, res) => {
         })
     }
 })
+app.get("/room/:slug", async (req, res) => {
+    const slug = req.params.slug;
+    const room = await prisma.room.findFirst({
+        where: {
+            slug
+        }
+    });
+
+    res.json({
+        room
+    })
+  })
 
 app.listen(3001, () => {
   console.log('HTTP Backend server running on port 3001');
